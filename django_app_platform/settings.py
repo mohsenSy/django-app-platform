@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'django_app_platform.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 db_url = os.environ.get("DATABASE_URL", None)
-if db_url or db_url != "":
+if db_url:
     DATABASES = {
         'default': dj_database_url.parse(os.environ["DATABASE_URL"])
     }
